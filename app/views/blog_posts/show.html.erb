@@ -5,8 +5,11 @@
     <%= @blog_post.title %>
   </div>
   <div class="panel-body">
-    <p>by <%= @blog_post.author %></p>
-    <p><%= @blog_post.blog_entry %></p>
+    by <strong><%= @blog_post.user.email %></strong> 
+    <p>
+    <%= @blog_post.blog_entry %>
+    </p>
+    <!--put time stuff here-->
   </div>
 </div>
 
@@ -25,10 +28,9 @@
   </div>
   <% @blog_post.comments.each do |comment| %>
   <div class="panel-body">
-    <p><strong><%= comment.author %></strong> said: </p>
+    <p><strong><%= comment.user.email %></strong> said: </p>
     <p><%= comment.comment_entry %></p>
   </div>
-   </div>
  <% end %>
 </div>
 

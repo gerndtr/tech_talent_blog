@@ -15,7 +15,7 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.author %></td>
-        <%= comment.created_at.strftime('%m/%d/%Y at %I:%M%p') %>
+   
         <td><%= comment.comment_entry %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>

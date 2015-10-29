@@ -9,9 +9,8 @@
         <div class="panel-heading">
           <%= link_to blog_post.title, blog_post %>
         </div>
-<%= @blog_post.created_at.strftime('%m/%d/%Y at %I:%M%p') %>
-<div class="panel-body">
-          by <%= blog_post.author %><br />
+        <div class="panel-body">
+          by <%= blog_post.user.email %><br />
           <p><%= blog_post.blog_entry[0...250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
         </div>
         <div class="panel-footer">
@@ -25,4 +24,4 @@
 </div>
 <br>
 
-<%= link_to 'New Blog post', new_blog_post_path %>
+<%= link_to 'New Blog post', new_blog_post_path, class: "btn btn-primary" %>
